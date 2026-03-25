@@ -2,6 +2,8 @@ import React from 'react'
 import styled from 'styled-components'
 import format from 'date-fns/format'
 
+import { QUERIES } from '../../constants'
+
 const Logo = (props) => {
   return (
     <Wrapper>
@@ -15,14 +17,21 @@ const Logo = (props) => {
 
 const Wrapper = styled.div`
   text-align: center;
+  margin-right: auto;
+  margin-left: auto;
 `
 
 const Link = styled.a`
   font-family: var(--font-family-logo);
   font-size: 3rem;
+
+  @media ${QUERIES.tabletAndUp} {
+    font-size: 4rem;
+  }
 `
 
 const TodaysDate = styled.p`
+  color: var(--color-gray-900);
   font-size: 1.125rem;
   font-weight: var(--font-weight-medium);
   margin-top: -1rem;

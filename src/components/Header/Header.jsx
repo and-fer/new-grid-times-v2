@@ -29,15 +29,27 @@ const Header = () => {
         </Row>
       </SuperHeader>
       <MainHeader>
+        <MainHeaderActionGroup>
+          <button>
+            <Search size={24} />
+          </button>
+          <button>
+            <Menu size={24} />
+          </button>
+        </MainHeaderActionGroup>
+
         <Logo />
+
+        <SubscribeCTA>
+          <Button>SUBSCRIBE</Button>
+          <p>Already a subscriber?</p>
+        </SubscribeCTA>
       </MainHeader>
     </HeaderTag>
   )
 }
 
-const HeaderTag = styled.header`
-  border: solid gray;
-`
+const HeaderTag = styled.header``
 
 const SuperHeader = styled.div`
   padding: 16px 0;
@@ -45,11 +57,7 @@ const SuperHeader = styled.div`
   color: white;
 
   @media ${QUERIES.laptopAndUp} {
-    background: inherit;
-
-    & button {
-      color: gray;
-    }
+    display: none;
   }
 `
 
@@ -77,6 +85,40 @@ const MainHeader = styled(MaxWidthWrapper)`
   justify-content: center;
   margin-top: 32px;
   margin-bottom: 48px;
+`
+
+const MainHeaderActionGroup = styled.div`
+  display: none;
+
+  @media ${QUERIES.laptopAndUp} {
+    display: flex;
+    gap: 24px;
+    color: var(--color-gray-900);
+
+    svg {
+      display: block;
+    }
+  }
+`
+
+const SubscribeCTA = styled.div`
+  display: none;
+
+  @media ${QUERIES.laptopAndUp} {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    p {
+      font-size: calc(14 / 16 * 1rem);
+      color: var(--color-gray-900);
+      font-style: italic;
+      font-weight: 400;
+      text-decoration: underline;
+      line-height: 22px;
+      margin-top: 6px;
+    }
+  }
 `
 
 export default Header
