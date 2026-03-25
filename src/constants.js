@@ -11,19 +11,19 @@ export const COLORS = {
   primary: 'hsl(224deg 30% 40%)',
   secondary: 'hsl(180deg 34% 37%)',
   urgent: 'hsl(0deg 55% 54%)',
-};
+}
 
 export const WEIGHTS = {
   normal: 400,
   medium: 550,
   bold: 700,
-};
+}
 
 export const BREAKPOINTS = {
   tabletMin: 550,
   laptopMin: 1100,
   desktopMin: 1500,
-};
+}
 
 export const QUERIES = {
   tabletAndUp: `(min-width: ${BREAKPOINTS.tabletMin / 16}rem)`,
@@ -32,11 +32,11 @@ export const QUERIES = {
   tabletOnly: `
     (min-width: ${BREAKPOINTS.tabletMin / 16}rem) and
     (max-width: ${(BREAKPOINTS.laptopMin - 1) / 16}rem)`,
-};
+}
 
 export const FAMILIES = {
   serif: '"Crimson Pro", Georgia, serif',
   sansSerif:
     '"Helvetica Neue", Helvetica, "Franklin Gothic Medium", "Franklin Gothic", "ITC Franklin Gothic", sans-serif',
   logo: 'Chomsky',
-};
+}

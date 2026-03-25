@@ -1,16 +1,16 @@
-import React from 'react';
-import styled from 'styled-components';
-import { Menu, Search, User } from 'react-feather';
+import React from 'react'
+import styled from 'styled-components'
+import { Menu, Search, User } from 'react-feather'
 
-import { QUERIES } from '../../constants';
+import { QUERIES } from '../../constants'
 
-import MaxWidthWrapper from '../MaxWidthWrapper';
-import Logo from '../Logo';
-import Button from '../Button';
+import MaxWidthWrapper from '../MaxWidthWrapper'
+import Logo from '../Logo'
+import Button from '../Button'
 
 const Header = () => {
   return (
-    <header>
+    <HeaderTag>
       <SuperHeader>
         <Row>
           <ActionGroup>
@@ -31,20 +31,32 @@ const Header = () => {
       <MainHeader>
         <Logo />
       </MainHeader>
-    </header>
-  );
-};
+    </HeaderTag>
+  )
+}
+
+const HeaderTag = styled.header`
+  border: solid gray;
+`
 
 const SuperHeader = styled.div`
   padding: 16px 0;
   background: var(--color-gray-900);
   color: white;
-`;
+
+  @media ${QUERIES.laptopAndUp} {
+    background: inherit;
+
+    & button {
+      color: gray;
+    }
+  }
+`
 
 const Row = styled(MaxWidthWrapper)`
   display: flex;
   justify-content: space-between;
-`;
+`
 
 const ActionGroup = styled.div`
   display: flex;
@@ -57,7 +69,7 @@ const ActionGroup = styled.div`
   svg {
     display: block;
   }
-`;
+`
 
 const MainHeader = styled(MaxWidthWrapper)`
   display: flex;
@@ -65,6 +77,6 @@ const MainHeader = styled(MaxWidthWrapper)`
   justify-content: center;
   margin-top: 32px;
   margin-bottom: 48px;
-`;
+`
 
-export default Header;
+export default Header
