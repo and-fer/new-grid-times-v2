@@ -16,7 +16,11 @@ const OpinionStory = ({ id, title, author, avatar }) => {
 };
 
 const Wrapper = styled.article`
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
   color: var(--color-gray-900);
+  padding: 16px 0;
 `;
 
 const Avatar = styled.img`
@@ -25,6 +29,7 @@ const Avatar = styled.img`
   height: 48px;
   border-radius: 50%;
   object-fit: cover;
+  align-self: center;
 `;
 
 const AuthorName = styled.p`
