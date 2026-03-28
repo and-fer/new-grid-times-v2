@@ -1,6 +1,6 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
-import { QUERIES } from '../../constants'
+import { QUERIES } from "../../constants";
 
 const MaxWidthWrapper = styled.div`
   position: relative;
@@ -14,6 +14,6 @@ const MaxWidthWrapper = styled.div`
     padding-left: 32px;
     padding-right: 32px;
   }
-`
+`;
 
-export default MaxWidthWrapper
+export default MaxWidthWrapper;

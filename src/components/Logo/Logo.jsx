@@ -1,25 +1,25 @@
-import React from 'react'
-import styled from 'styled-components'
-import format from 'date-fns/format'
+import React from "react";
+import styled from "styled-components";
+import format from "date-fns/format";
 
-import { QUERIES } from '../../constants'
+import { QUERIES } from "../../constants";
 
 const Logo = (props) => {
   return (
     <Wrapper>
-      <Link href='/' {...props}>
+      <Link href="/" {...props}>
         New Grid Times
       </Link>
-      <TodaysDate>{format(new Date(), 'EEEE, MMMM do, yyyy')}</TodaysDate>
+      <TodaysDate>{format(new Date(), "EEEE, MMMM do, yyyy")}</TodaysDate>
     </Wrapper>
-  )
-}
+  );
+};
 
 const Wrapper = styled.div`
   text-align: center;
   margin-right: auto;
   margin-left: auto;
-`
+`;
 
 const Link = styled.a`
   font-family: var(--font-family-logo);
@@ -28,13 +28,13 @@ const Link = styled.a`
   @media ${QUERIES.tabletAndUp} {
     font-size: 4rem;
   }
-`
+`;
 
 const TodaysDate = styled.p`
   color: var(--color-gray-900);
   font-size: 1.125rem;
   font-weight: var(--font-weight-medium);
   margin-top: -1rem;
-`
+`;
 
-export default Logo
+export default Logo;

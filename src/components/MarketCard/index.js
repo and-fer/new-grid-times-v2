@@ -1,1 +1,1 @@
-export { default } from './MarketCard';
+export { default } from "./MarketCard";

@@ -1,1 +1,1 @@
-export { default } from './SpecialtyStoryGrid';
+export { default } from "./SpecialtyStoryGrid";

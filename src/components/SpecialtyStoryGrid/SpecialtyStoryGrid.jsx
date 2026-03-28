@@ -1,11 +1,11 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
-import { MARKET_DATA, SPORTS_STORIES } from '../../data';
+import { MARKET_DATA, SPORTS_STORIES } from "../../data";
 
-import MarketCard from '../MarketCard';
-import SectionTitle from '../SectionTitle';
-import MiniStory from '../MiniStory';
+import MarketCard from "../MarketCard";
+import SectionTitle from "../SectionTitle";
+import MiniStory from "../MiniStory";
 
 const SpecialtyStoryGrid = () => {
   return (
@@ -13,8 +13,8 @@ const SpecialtyStoryGrid = () => {
       <MarketsSection>
         <SectionTitle
           cornerLink={{
-            href: '/markets',
-            content: 'Visit Markets data »',
+            href: "/markets",
+            content: "Visit Markets data »",
           }}
         >
           Markets
@@ -28,8 +28,8 @@ const SpecialtyStoryGrid = () => {
       <SportsSection>
         <SectionTitle
           cornerLink={{
-            href: '/sports',
-            content: 'Visit Sports page »',
+            href: "/sports",
+            content: "Visit Sports page »",
           }}
         >
           Sports

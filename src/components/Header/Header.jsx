@@ -1,12 +1,12 @@
-import React from 'react'
-import styled from 'styled-components'
-import { Menu, Search, User } from 'react-feather'
+import React from "react";
+import styled from "styled-components";
+import { Menu, Search, User } from "react-feather";
 
-import { QUERIES } from '../../constants'
+import { QUERIES } from "../../constants";
 
-import MaxWidthWrapper from '../MaxWidthWrapper'
-import Logo from '../Logo'
-import Button from '../Button'
+import MaxWidthWrapper from "../MaxWidthWrapper";
+import Logo from "../Logo";
+import Button from "../Button";
 
 const Header = () => {
   return (
@@ -46,10 +46,10 @@ const Header = () => {
         </SubscribeCTA>
       </MainHeader>
     </HeaderTag>
-  )
-}
+  );
+};
 
-const HeaderTag = styled.header``
+const HeaderTag = styled.header``;
 
 const SuperHeader = styled.div`
   padding: 16px 0;
@@ -59,12 +59,12 @@ const SuperHeader = styled.div`
   @media ${QUERIES.laptopAndUp} {
     display: none;
   }
-`
+`;
 
 const Row = styled(MaxWidthWrapper)`
   display: flex;
   justify-content: space-between;
-`
+`;
 
 const ActionGroup = styled.div`
   display: flex;
@@ -77,7 +77,7 @@ const ActionGroup = styled.div`
   svg {
     display: block;
   }
-`
+`;
 
 const MainHeader = styled(MaxWidthWrapper)`
   display: flex;
@@ -85,7 +85,7 @@ const MainHeader = styled(MaxWidthWrapper)`
   justify-content: center;
   margin-top: 32px;
   margin-bottom: 48px;
-`
+`;
 
 const MainHeaderActionGroup = styled.div`
   display: none;
@@ -99,7 +99,7 @@ const MainHeaderActionGroup = styled.div`
       display: block;
     }
   }
-`
+`;
 
 const SubscribeCTA = styled.div`
   display: none;
@@ -119,6 +119,6 @@ const SubscribeCTA = styled.div`
       margin-top: 6px;
     }
   }
-`
+`;
 
-export default Header
+export default Header;

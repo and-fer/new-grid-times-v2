@@ -1,1 +1,1 @@
-export { default } from './MainStory';
+export { default } from "./MainStory";
