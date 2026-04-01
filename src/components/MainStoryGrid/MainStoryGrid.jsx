@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 import { MAIN_STORY, OPINION_STORIES, SECONDARY_STORIES } from "../../data";
+import { QUERIES } from "../../constants";
 
 import SectionTitle from "../SectionTitle";
 import MainStory from "../MainStory";
@@ -26,11 +27,11 @@ const MainStoryGrid = () => {
 
       <OpinionSection>
         <SectionTitle>Opinion</SectionTitle>
-        <StoryList>
+        <OpinionStoryList>
           {OPINION_STORIES.map((story, index) => (
             <OpinionStory key={story.id} {...story} />
           ))}
-        </StoryList>
+        </OpinionStoryList>
       </OpinionSection>
 
       <AdvertisementSection>
@@ -62,6 +63,16 @@ const SecondaryStorySection = styled.section`
 const StoryList = styled.div`
   display: flex;
   flex-direction: column;
+`;
+
+const OpinionStoryList = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  @media ${QUERIES.tabletOnly} {
+    flex-direction: row;
+  }
 `;
 
 const OpinionSection = styled.section`
