@@ -43,8 +43,9 @@ const Wrapper = styled.article`
       "image image"
       "heading heading"
       "abstract abstract";
+
+    grid-template-columns: minmax(5px, 1fr) minmax(5px, 1fr);
   }
-  grid-template-columns: minmax(5px, 1fr) minmax(5px, 1fr);
 `;
 
 const Image = styled.img`
