@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 
+import { QUERIES } from "../../constants";
+
 const SecondaryStory = ({ id, title, image, location, abstract }) => {
   return (
     <Anchor href={`/story/${id}`}>
@@ -18,6 +20,10 @@ const Anchor = styled.a`
   padding-top: 16px;
   padding-bottom: 16px;
 
+  &:first-of-type {
+    padding-top: 0;
+  }
+
   &:last-of-type {
     border-bottom: revert;
   }
@@ -31,6 +37,14 @@ const Wrapper = styled.article`
   gap: 4px 16px;
   grid-template-columns: 120px 1fr;
   color: var(--color-gray-900);
+
+  @media ${QUERIES.tabletOnly} {
+    grid-template-areas:
+      "image image"
+      "heading heading"
+      "abstract abstract";
+  }
+  grid-template-columns: minmax(5px, 1fr) minmax(5px, 1fr);
 `;
 
 const Image = styled.img`
@@ -55,6 +69,10 @@ const Abstract = styled.p`
   grid-area: abstract;
   font-size: 1rem;
   white-space: pre-wrap;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
 `;
 
 export default SecondaryStory;
