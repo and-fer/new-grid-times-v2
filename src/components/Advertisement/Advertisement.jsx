@@ -20,6 +20,7 @@ const Wrapper = styled.div`
   flex-direction: column;
   align-items: center;
   gap: 8px;
+  border-top: 1px solid var(--color-gray-300);
 `;
 
 const Prefix = styled.p`

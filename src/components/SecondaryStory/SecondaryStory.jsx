@@ -16,9 +16,11 @@ const SecondaryStory = ({ id, title, image, location, abstract }) => {
 };
 
 const Anchor = styled.a`
+  text-decoration: none;
+
   border-bottom: 1px solid var(--color-gray-300);
-  padding-top: 16px;
-  padding-bottom: 16px;
+
+  padding: 16px 0;
 
   &:first-of-type {
     padding-top: 0;
@@ -45,6 +47,8 @@ const Wrapper = styled.article`
       "abstract abstract";
 
     grid-template-columns: minmax(5px, 1fr) minmax(5px, 1fr);
+
+    gap: 8px;
   }
 `;
 
