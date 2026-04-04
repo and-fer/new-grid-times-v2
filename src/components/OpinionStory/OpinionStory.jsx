@@ -49,6 +49,9 @@ const Avatar = styled.img`
 
   @media ${QUERIES.tabletOnly} {
   }
+  @media ${QUERIES.laptopAndUp} {
+    align-self: flex-start;
+  }
 `;
 
 const AuthorName = styled.p`
