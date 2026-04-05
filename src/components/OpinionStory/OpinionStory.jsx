@@ -18,8 +18,13 @@ const OpinionStory = ({ id, title, author, avatar }) => {
 };
 
 const Anchor = styled.a`
-  border-bottom: 1px solid var(--color-gray-300);
   padding: 16px 0;
+
+  border-bottom: 1px solid var(--color-gray-300);
+
+  @media ${QUERIES.tabletOnly} {
+    border: revert;
+  }
 
   &:last-of-type {
     border-bottom: revert;

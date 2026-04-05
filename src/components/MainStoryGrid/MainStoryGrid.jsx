@@ -101,9 +101,14 @@ const StoryList = styled.div`
 const OpinionStoryList = styled.div`
   display: flex;
   flex-direction: column;
+  gap: 16px;
 
   @media ${QUERIES.tabletOnly} {
     flex-direction: row;
+  }
+
+  @media ${QUERIES.laptopAndUp} {
+    gap: 0;
   }
 `;
 
