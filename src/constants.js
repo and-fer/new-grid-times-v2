@@ -40,3 +40,7 @@ export const FAMILIES = {
     '"Helvetica Neue", Helvetica, "Franklin Gothic Medium", "Franklin Gothic", "ITC Franklin Gothic", sans-serif',
   logo: "Chomsky",
 };
+
+export const MARGINS = {
+  main: 48 + "px",
+};

@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 import { MAIN_STORY, OPINION_STORIES, SECONDARY_STORIES } from "../../data";
-import { QUERIES } from "../../constants";
+import { QUERIES, MARGINS } from "../../constants";
 
 import SectionTitle from "../SectionTitle";
 import MainStory from "../MainStory";
@@ -50,7 +50,6 @@ const Wrapper = styled.div`
     "advertisement";
 
   color: red;
-  margin-bottom: 48px;
 
   @media ${QUERIES.tabletOnly} {
     grid-template-areas:
@@ -71,6 +70,7 @@ const Wrapper = styled.div`
 
 const MainStorySection = styled.section`
   grid-area: main-story;
+  margin-bottom: ${MARGINS.main};
 
   @media ${QUERIES.tabletAndUp} {
     border-right: 1px solid var(--color-gray-300);
@@ -80,6 +80,7 @@ const MainStorySection = styled.section`
 
 const SecondaryStorySection = styled.section`
   grid-area: secondary-stories;
+  margin-bottom: ${MARGINS.main};
 
   @media ${QUERIES.tabletAndUp} {
     border-right: 1px solid var(--color-gray-300);
@@ -116,12 +117,30 @@ const OpinionSection = styled.section`
   grid-area: opinion-stories;
   padding: 16px;
   padding-top: 0;
-  margin-top: -9px;
+
+  @media ${QUERIES.tabletOnly} {
+    padding: 0;
+    margin-bottom: ${MARGINS.main};
+  }
+
+  @media ${QUERIES.laptopAndUp} {
+    margin-top: -9px;
+  }
 `;
 
 const AdvertisementSection = styled.section`
   grid-area: advertisement;
   padding: 16px;
+
+  @media ${QUERIES.tabletOnly} {
+    padding: 0;
+  }
+
+  @media ${QUERIES.tabletOnly}
+    margin-top: 48px;
+    margin-bottom: 48px;
+
+  }
 `;
 
 export default MainStoryGrid;
