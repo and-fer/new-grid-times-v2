@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 import { MARKET_DATA, SPORTS_STORIES } from "../../data";
+import { QUERIES } from "../../constants";
 
 import MarketCard from "../MarketCard";
 import SectionTitle from "../SectionTitle";
@@ -57,12 +58,19 @@ const MarketCards = styled.div`
   gap: 16px;
 `;
 
-const SportsSection = styled.section``;
+const SportsSection = styled.section`
+  overflow: auto;
+`;
 
 const SportsStories = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   gap: 16px;
+
+  grid-template-columns: repeat(auto-fill, minmax(183px, 1fr));
+
+  @media ${QUERIES.tabletAndUp} {
+    grid-template-columns: repeat(${SPORTS_STORIES.length}, minmax(300px, 1fr));
+  }
 `;
 
 export default SpecialtyStoryGrid;
