@@ -1,6 +1,9 @@
 import React from "react";
 import { Twitter, Facebook } from "react-feather";
 import styled from "styled-components";
+
+import { QUERIES } from "../../constants";
+
 import MaxWidthWrapper from "../MaxWidthWrapper";
 
 import VisuallyHidden from "../VisuallyHidden";
@@ -166,6 +169,22 @@ const MainNavArea = styled.div`
   gap: 32px;
   padding: 32px 0 48px;
   text-align: center;
+
+  @media ${QUERIES.tabletAndUp} {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 117px;
+
+    text-align: start;
+  }
+
+  @media ${QUERIES.tabletOnly} {
+    gap: 80px;
+  }
+
+  /*nav {
+    min-width: 150px;
+  }*/
 `;
 
 const MainNavHeading = styled.h2`
