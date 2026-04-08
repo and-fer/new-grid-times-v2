@@ -34,7 +34,7 @@ const TodaysDate = styled.p`
   color: var(--color-gray-900);
   font-size: 1.125rem;
   font-weight: var(--font-weight-medium);
-  margin-top: -1rem;
+  margin-top: -16px;
 `;
 
 export default Logo;

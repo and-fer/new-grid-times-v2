@@ -85,6 +85,16 @@ const MainHeader = styled(MaxWidthWrapper)`
   justify-content: center;
   margin-top: 32px;
   margin-bottom: 48px;
+
+  @media ${QUERIES.tabletOnly} {
+    margin-top: 48px;
+    margin-bottom: 72px;
+  }
+
+  @media ${QUERIES.laptopAndUp} {
+    margin-top: 16px;
+    margin-bottom: 72px;
+  }
 `;
 
 const MainHeaderActionGroup = styled.div`
@@ -108,6 +118,8 @@ const SubscribeCTA = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+    align-self: end;
+    margin-bottom: 8px;
 
     p {
       font-size: calc(14 / 16 * 1rem);
@@ -116,7 +128,7 @@ const SubscribeCTA = styled.div`
       font-weight: 400;
       text-decoration: underline;
       line-height: 22px;
-      margin-top: 6px;
+      margin-top: 8px;
     }
   }
 `;
